@@ -41,7 +41,7 @@ function init() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setAnimationLoop( animate );
 
-	effect = new AsciiEffect( renderer, ' .:ujsakJ@#', { invert: true } );
+	effect = new AsciiEffect( renderer, ' .:jusak@#', { invert: true } );
 	effect.setSize( window.innerWidth, window.innerHeight );
 	effect.domElement.style.color = 'red';
 	effect.domElement.style.backgroundColor = 'black';
