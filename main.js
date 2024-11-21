@@ -14,7 +14,6 @@ let logo;
 init();
 
 function init() {
-
 	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 1000 );
 	camera.position.y = 500;
 	camera.position.z = 200;
@@ -46,33 +45,23 @@ function init() {
 	effect.domElement.style.color = 'red';
 	effect.domElement.style.backgroundColor = 'black';
 
-
 	document.body.appendChild( effect.domElement );
-
 	controls = new TrackballControls( camera, effect.domElement );
-
 	window.addEventListener( 'resize', onWindowResize );
 
 }
 
 function onWindowResize() {
-
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
-
 	effect.setSize( window.innerWidth, window.innerHeight );
 }
 
 function animate() {
-
 	const timer = Date.now() - start;
-
 	if (logo) {
 		logo.scene.rotation.z = timer * 0.0002-0.9;
 	}
-
 	controls.update();
-
 	effect.render( scene, camera );
-
 }
