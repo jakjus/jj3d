@@ -40,7 +40,7 @@ function init() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setAnimationLoop( animate );
 
-	effect = new AsciiEffect( renderer, ' .:jusak@#', { invert: true } );
+	effect = new AsciiEffect( renderer, ' .:jusak@#', { invert: true, fResolution: 0.01 } );
 	effect.setSize( window.innerWidth, window.innerHeight );
 	effect.domElement.style.color = 'red';
 	effect.domElement.style.backgroundColor = 'black';
